@@ -15,8 +15,8 @@ CREATE TABLE [dbo].Student(
 	[LastName] [nvarchar](50) NOT NULL,
 	[DateOfBirth] [date] NOT NULL,
 	[EnrolledDate] [date] NOT NULL,
-	[Gender] [nchar](1) NOT NULL,
-	[NationalIdNumber] [char](13) NOT NULL,
+	[Gender] [char](1) NOT NULL,
+	[NationalIdNumber] [nvarchar](13) NOT NULL,
 	[StudentCardNumber] [nvarchar](50) NOT NULL,	
 	CONSTRAINT [PK_Student] PRIMARY KEY CLUSTERED 
 (
@@ -41,8 +41,8 @@ CREATE TABLE [dbo].Course(
 	[Id] [smallint] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](50) NOT NULL,
 	[Credit] [tinyint] NOT NULL,
-	[AcademicYear] [nvarchar](2) NOT NULL,
-	[Semester] [nvarchar](2) NOT NULL,
+	[AcademicYear] [tinyint] NOT NULL,
+	[Semester] [tinyint] NOT NULL,
 	CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -69,7 +69,7 @@ CREATE TABLE [dbo].GradeDetails(
 	[AchievementTypeId] [tinyint] NOT NULL,
 	[AchievementPoints] [tinyint] NOT NULL,
 	[AchievementMaxPoints] [tinyint] NOT NULL,
-	[AchievementDate] [date] NOT NULL,
+	[AchievementDate] [datetime] NOT NULL,
 	CONSTRAINT [PK_Grade.Details] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
