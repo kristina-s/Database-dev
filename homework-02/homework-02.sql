@@ -7,10 +7,12 @@ SELECT * FROM Student WHERE Gender = 'M'
 SELECT * FROM Student WHERE LastName like 'T%'
 SELECT * FROM Student WHERE EnrolledDate >= '1998-01-01' and EnrolledDate < '1998-02-01'
 SELECT * FROM Student WHERE EnrolledDate >= '1998-01-01' and EnrolledDate < '1998-02-01' and LastName like 'J%'
+GO
 --------------------------
 SELECT * FROM Student WHERE FirstName = 'Antonio' ORDER BY LastName
 SELECT * FROM Student ORDER BY FirstName
 SELECT * FROM Student WHERE Gender = 'M' ORDER BY EnrolledDate DESC
+GO
 ---------------------------
 SELECT FirstName FROM Teacher
 UNION ALL
